@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom을 설명하는 간단한 웹페이지</title>
+    <script type="text/javascript" src="../d3/d3.min.js"></script>
+</head>
+<body>
+    <div id="someDiv" style="width:200px;height:100px;border:1px solid black">
+        <input id="someCheckbox" type="checkbox">
+        <button type="button" onclick="javascript:d3Change()">D3 변환</button>
+    </div>
+
+    <script type="text/javascript">
+        function d3Change () {
+            d3.select('#someDiv').style('border', '5px darkgray dashed');
+            d3.select('#someDiv').attr('id', 'newID');
+            d3.select('#someCheckbox').property('checked', true);
+        }
+    </script>
+</body>
+</html>

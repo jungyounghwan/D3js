@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SVG 요소를 가진 웹 페이지</title>
+    <script type="text/javascript" src="../d3/d3.min.js"></script>
+</head>
+<body>
+    <div id="infovizDiv">
+        <svg style="width:500px;height:500px;border:1px solid lightgray">
+            <g>
+                <circle r="2" />
+                <text>This circle's Label</text>
+            </g>
+            </svg>
+    </div>
+    <button type="button" onclick="javascript:d3Change()">D3 리셋</button>
+    <button type="button" onclick="javascript:d3Change1()">D3 변환1</button>
+    <button type="button" onclick="javascript:d3Change2()">D3 변환2</button>
+    <script type="text/javascript">
+        function d3Change () {
+            d3.select('g').attr('transform', '');
+        }
+        function d3Change1 () {
+            d3.select('g').attr('transform', 'translate(100,50)');
+        }
+        function d3Change2 () {
+            d3.select('g').attr('transform', 'translate(100,400) scale(3.5)');
+        }
+    </script>
+</body>
+</html>
